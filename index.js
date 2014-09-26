@@ -22,7 +22,6 @@ var _ = {
 	replace: curry(function(regex, replaced, str) { return str.replace(regex, replaced); }),
 	match: curry(function(regex, str) { return str.match(regex); }),
 	
-	//flatten: function(x,y) { return x.concat(y); },
 	max: function(x,y) { return x<y?y:x; },
 	min: function(x,y) { return x<y?x:y; },
 
@@ -31,7 +30,8 @@ var _ = {
 		return prop.reduce(function(o, p) { o[p] = obj[p]; return o; }, {})
 	}),
 
-	clone: function(x) { return JSON.parse(JSON.stringify(x)); }
+	clone: function(x) { return JSON.parse(JSON.stringify(x)); },
+	curry: curry
 }
 
 _.exists = _.isTrue;
