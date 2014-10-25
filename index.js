@@ -16,6 +16,7 @@ var _ = {
 
 	unique: function(x,i,a) { return a.indexOf(x) == i; },
 	isArray: function(x) { return Object.prototype.toString.call(x) == "[object Array]"; },
+	toArray: function(a) { return Array.prototype.slice.call(a); },
 	contains: function(arr, val) { return arr.indexOf(val) != -1},
 	isPartOf: curry(function(val, arr) { return _.contains(arr, val); }),
 	isSubstringOf: curry(function(str, val) { return _.contains(str, val); }),
