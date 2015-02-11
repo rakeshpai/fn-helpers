@@ -10,6 +10,7 @@ var _ = {
 	until: function(n) { var a = []; for(var i=0; i<n; i++) { a.push(i); } return a; },
 	log: function(x) { console.log(x); return x; },
 	keys: function(x) { return Object.keys(x); },
+	addKey: curry(function(prop, value, obj) { obj[prop] = value; return obj; }),
 	propFrom: curry(function(o,p) { return o[p]; }),
 	flatten: function(arr) { return [].concat.apply([], arr); },
 	intersection: function(x,y) { return x.filter(function(i) { return _.contains(y, i); }); },
